@@ -4,6 +4,7 @@ const colorDark = '#222'
 const colorDark2 = '#666'
 const colorGray = '#e3e3e3'
 const colorWhite = '#fff'
+const colorAccent = '#1c61e7'
 
 const styles: CSSClasses = {
   dark: {
@@ -20,6 +21,10 @@ const styles: CSSClasses = {
 
   'bg-gray': {
     backgroundColor: colorGray,
+  },
+
+  'bg-blue': {
+    backgroundColor: colorAccent,
   },
 
   flex: {
@@ -126,7 +131,7 @@ const styles: CSSClasses = {
   },
 
   page: {
-    fontFamily: 'Nunito',
+    fontFamily: 'Raleway',
     fontSize: '13px',
     color: '#555',
     padding: '40px 35px',

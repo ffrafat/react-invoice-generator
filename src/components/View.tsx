@@ -11,7 +11,7 @@ const View: FC<PropsWithChildren<Props>> = ({ className, pdfMode, children }) =>
   return (
     <>
       {pdfMode ? (
-        <PdfView style={compose('view ' + (className ? className : ''))}>{children}</PdfView>
+        <PdfView style={compose(className ? className : '')}>{children}</PdfView>
       ) : (
         <div className={'view ' + (className ? className : '')}>{children}</div>
       )}

@@ -40,7 +40,7 @@ const Download: FC<Props> = ({ data, setData }) => {
     const blob = new Blob([JSON.stringify(debounced)], {
       type: 'text/plain;charset=utf-8',
     })
-    FileSaver(blob, title + '.template')
+    FileSaver.saveAs(blob, title + '.template')
   }
 
   const title = data.invoiceTitle ? data.invoiceTitle.toLowerCase() : 'invoice'
@@ -53,21 +53,21 @@ const Download: FC<Props> = ({ data, setData }) => {
         aria-label="Save PDF"
         title="Save PDF"
         className="download-pdf__pdf"
-      ></PDFDownloadLink>
-      <p>Save PDF</p>
-
+      >
+        Save PDF
+      </PDFDownloadLink>
       <button
         onClick={handleSaveTemplate}
         aria-label="Save Template"
         title="Save Template"
-        className="download-pdf__template_download mt-40"
-      />
-      <p className="text-small">Save Template</p>
-
+        className="download-pdf__template_download"
+      >
+        Save Template
+      </button>
       <label className="download-pdf__template_upload">
         <input type="file" accept=".json,.template" onChange={handleInput} />
+        <span>Upload Template</span>
       </label>
-      <p className="text-small">Upload Template</p>
     </div>
   )
 }
